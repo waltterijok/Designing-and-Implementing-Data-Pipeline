@@ -5,8 +5,8 @@ class TemperatureConverter:
         self.temperature = 0.0
 
     # receives the input from main and stores it / ottaa vastaan main-tiedoston input arvon
-    def setTemperature(self, value):
-        self.temperature = value
+    def setTemperature(self, input_value):
+        self.temperature = input_value
 
     # returns the celsius value given / palauttaa annetun celsius arvon
     def toCelsius(self):
