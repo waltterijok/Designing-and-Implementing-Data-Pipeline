@@ -18,19 +18,24 @@ while True:
 
     if choice == 1:
         temperature = float(input("Enter temperature: "))
-        converter.setTemperature(temperature)               #sends 'temperature' to the object for handling
+        converter.setTemperature(temperature)               # sends 'temperature' to be saved for the object
         print(f"Temperature set to {temperature}")
+    
     elif choice == 2:
-        in_celsius = converter.toCelsius()
+        in_celsius = converter.toCelsius()                  # runs toCelsius from temperature_converter.py
         print(f"Temperature in celsius: {in_celsius}")
+    
     elif choice == 3:
-        in_fahrenheit = converter.toFahrenheit()
+        in_fahrenheit = converter.toFahrenheit()            # runs toFahrenheit from temperature_converter.py
         print(f"Temperature in fahrenheit: {in_fahrenheit}")
+    
     elif choice == 4:
-        in_kelvin = converter.toKelvin()
+        in_kelvin = converter.toKelvin()                    # runs toKelvin from temperature_converter.py
         print(f"Temperature in kelvin: {in_kelvin}")
+    
     elif choice == 0:
         print("Program ending.")
         break
+    
     else:
         print("Please insert choice between 1 and 4")

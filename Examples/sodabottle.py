@@ -8,11 +8,11 @@ class SodaBottle:
 
     def openBottle(self) -> None:
         if not self.capopen:
-            print("sihhh...")
+            print("Sihhh...")
             self.capopen = True
     
     def drink(self) -> None:
         if not self.capopen:
             print("Cant drink from a closed bottle...")
         else:
-            print(f"mmm, tastes like {self.brand}")
+            print(f"Mmm, tastes like {self.brand}")

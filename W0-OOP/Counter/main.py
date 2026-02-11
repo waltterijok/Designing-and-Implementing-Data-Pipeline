@@ -11,20 +11,24 @@ while True:
     print("1. Add count")
     print("2. Get count")
     print("3. Zero count")
-    print("4. Exit program")
+    print("0. Exit program")
     choice = int(input("Choice: "))
 
     if choice == 1:
-        counter.addCount()      # runs the addCount object in counter.py
+        counter.addCount()      # runs the addCount object from counter.py
         print("Count increased")
+    
     elif choice == 2:
-        current_count = counter.getCount()      # pulls the current count with getCount in counter.py
+        current_count = counter.getCount()      # pulls the current count with getCount from counter.py
         print(f"Current count '{current_count}'")
+    
     elif choice == 3:
         counter.zeroCount()         # resets the count with zeroCount from counter.py
         print("Count zeroed")
-    elif choice == 4:
+    
+    elif choice == 0:
         print("Program ending")
         break
+    
     else:
-        print("Insert a choice between 1 and 4")
+        print("Insert a proper choice")
