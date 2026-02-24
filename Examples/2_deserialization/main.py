@@ -8,7 +8,7 @@ print(f"#### START {filename} ####")
 
 for row in rows:
     #print(row)
-    item = Item.deserialze(row)
+    item = Item.deserialize(row)
     item.displayCategory()
     item.displayPrice()
     item.displayWeight()

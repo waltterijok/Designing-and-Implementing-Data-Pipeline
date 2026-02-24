@@ -18,3 +18,14 @@ class FileHandler:
             print("File not found")
             exit(-1)
         return rows
+
+    def write(self, rows:list[str]):
+        try:
+            filehandle = open(self.filepath, "w", encoding="UTF-8")
+            for row in rows:
+                filehandle.write(f"{row}\n")
+            filehandle.close()
+        except Exception:
+            print(f"Failed to write file '{self.filepath}'")
+            exit(-1)
+        return None

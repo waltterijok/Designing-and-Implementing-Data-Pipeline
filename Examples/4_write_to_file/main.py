@@ -1,15 +1,36 @@
 from file_handler import FileHandler
 from item import Item
 
-filename = "inventory.csv"
-inventory_file = FileHandler(filename)      # creates the object
-rows = inventory_file.read()                # use read method for the created object
-print(f"#### START {filename} ####")
+class Main:
+    def __init__(self):
 
-for row in rows:
-    #print(row)
-    item = Item.deserialze(row)
-    item.displayCategory()
-    item.displayPrice()
-    item.displayWeight()
-print(f"#### END {filename} ####")
+        filename = "inventory.csv"
+        inventory_file = FileHandler(filename)
+        rows = inventory_file.read()
+        print("#### inventory ####")
+        inventory: list[Item] = []
+        for row in rows:
+            _item = Item.deserialize(row)
+            _item.displayPrice()
+            inventory.append(_item)
+        print("#### inventory ####")
+        feed = input(f"Change item value (enter 1 - {len(inventory)}): ")
+        try:
+            index = int(feed) - 1
+            feed = input (f"Set new value for {inventory[index].name}: ")
+            inventory[index].setValue(float(feed))
+        except Exception:
+            print("Oops, something went wrong!")
+        
+        print("Serializing items into rows.")
+
+        rows : list[str] = []
+        for _item in inventory:
+            row = _item.serialize()
+            rows.append(row)
+        print(f"Saving items in '{filename}'")
+        inventory_file.write(rows)
+        print("#### Program ending ####")
+
+if __name__ == "__main__":
+    main = Main()

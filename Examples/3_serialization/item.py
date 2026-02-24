@@ -9,16 +9,32 @@ class Item:
     weight: float
 
     @staticmethod
-    def deserialze(row:str) -> 'Item':
+    def deserialize(row:str) -> 'Item':
         columns = row.split(Item.SEPARATOR)         # comma separated values
         item = Item(
-            columns[0],     # Name
-            columns[1],     # Value
-            columns[2],     # category
-            columns[3],     # Weight
+            columns[0], # Name
+            columns[1], # Value
+            columns[2], # category
+            columns[3], # Weight
         )
         return item
     
+    def serialize(self) -> str:
+        columns : list[str] = []
+        columns.append(self.name)
+        columns.append(str(self.value))
+        columns.append(self.category)
+        columns.append(str(self.weight))
+        row = ", ".join(columns)
+        return row
+    
+    def setValue(self, new_value: float) -> None:
+        if new_value < 0:
+            print("Value cant be negative")
+        else:
+            self.value = new_value
+        return None
+
     def displayPrice(self):
         print(f"{self.name} costs {self.value} €.")
 
