@@ -1,4 +1,4 @@
-from dataclasses import dataclass   # comes from the standard library module dataclasses. Has to be imported.s
+from dataclasses import dataclass   # comes from the standard library module dataclasses. Has to be imported.
 
 @dataclass
 class Item:
