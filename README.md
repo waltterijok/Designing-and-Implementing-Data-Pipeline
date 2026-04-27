@@ -9,4 +9,3 @@
  
   Other various examples from lectures, youtube videos etc are found in Examples folder. No idea why anyone would look there but...
   They are there.
-
