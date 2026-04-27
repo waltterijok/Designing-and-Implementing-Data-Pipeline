@@ -13,8 +13,6 @@ def pickEntity(choice):
 
 def interactWithEntity(entity):
     print("Finding the correct Night City entity...")
-    entity.
-
 
 def main():
     print("Welcome to Night City!")
