@@ -1,8 +1,20 @@
 from objects import *
 
-def pickEntity():
+def pickEntity(choice):
+    if choice == 1:
+        return Player()
+    elif choice == 2:
+        return NPC()
+    elif choice == 3:
+        return Object()
+    else:
+        print("Can't do that choom, gotta make a decision")
+        return None
 
-def interactWithEntity():
+def interactWithEntity(entity):
+    print("Finding the correct Night City entity...")
+    entity.
+
 
 def main():
     print("Welcome to Night City!")
@@ -23,3 +35,15 @@ def main():
                 print("3. Arch Nazare (Motorcycle)")
 
                 entity_choice = int(input("Your choice: "))
+                entities.append(pickEntity(entity_choice))
+            
+            elif choice == 1:
+                interactWithEntity(entities[0])
+
+            else:
+                print("Come on choom, we went over this... gotta do something")
+
+        except ValueError:
+            print("Gotta pick something choom")
+
+main()

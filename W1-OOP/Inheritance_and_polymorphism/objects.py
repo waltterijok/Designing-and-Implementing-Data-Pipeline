@@ -72,12 +72,12 @@ class Object(Entity):
 
 johnny = NPC()
 
-johnny.beAnAsshole()
-johnny.runMouth()
+'''johnny.beAnAsshole()'''
+'''johnny.runMouth()'''
 
-'''nazare = Object()
+nazare = Object()
 
-nazare.isRunning()
+'''nazare.isRunning()
 nazare.popWheelie()
 nazare.turnOn()
 nazare.isRunning()
