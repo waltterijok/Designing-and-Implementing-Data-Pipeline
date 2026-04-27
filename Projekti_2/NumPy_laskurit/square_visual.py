@@ -4,7 +4,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import tkinter as tk
 from square import *
 
-# --- Rotation Matrices ---
+# Rotation Matrices
 def rotation_x(theta):
     return np.array([
         [1, 0, 0],
@@ -26,7 +26,7 @@ def rotation_z(theta):
         [0, 0, 1]
     ])
 
-# --- Square (in XY plane) ---
+# Square (in XY plane)
 square = np.array([
     [-0.5, -0.5, 0],
     [ 0.5, -0.5, 0],
@@ -34,7 +34,7 @@ square = np.array([
     [-0.5,  0.5, 0]
 ])
 
-# --- Update Plot ---
+# Update Plot
 def update(val=None):
     # Get slider values (degrees → radians)
     x = np.radians(x_slider.get())
@@ -67,11 +67,11 @@ def update(val=None):
     ax.set_title("Rotate The Square")
     canvas.draw()
 
-# --- Tkinter Window ---
+# Tkinter Window
 root = tk.Tk()
 root.title("Rotate The Square")
 
-# --- Matplotlib Figure ---
+# Matplotlib Figure
 fig = plt.figure(figsize=(5,5))
 ax = fig.add_subplot(111, projection='3d')
 

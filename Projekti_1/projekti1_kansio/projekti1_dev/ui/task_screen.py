@@ -57,7 +57,7 @@ class TaskScreen(tk.Frame):
             self.currentTasks = getDoneTasks()
         for task in self.currentTasks:
             status = "✓" if task.done else "○"
-            self.listbox.insert(tk.end, f"{status} {task.title}")
+            self.listbox.insert(tk.END, f"{status} {task.title}")
 
     def getSelectedTasks(self):
         selection = self.listbox.curselection()

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import tkinter as tk
 
-# --- Rotation Matrices ---
+# Rotation Matrices
 def rotation_x(theta):
     return np.array([
         [1, 0, 0],
@@ -25,26 +25,26 @@ def rotation_z(theta):
         [0, 0, 1]
     ])
 
-# --- Cube vertices ---
+# Cube vertices 
 cube = np.array([
-    [-0.5, -0.5, -0.5],
-    [ 0.5, -0.5, -0.5],
-    [ 0.5,  0.5, -0.5],
-    [-0.5,  0.5, -0.5],
-    [-0.5, -0.5,  0.5],
-    [ 0.5, -0.5,  0.5],
-    [ 0.5,  0.5,  0.5],
-    [-0.5,  0.5,  0.5]
+    [-0.4, -0.4, -0.4],
+    [ 0.4, -0.4, -0.4],
+    [ 0.4,  0.4, -0.4],
+    [-0.4,  0.4, -0.4],
+    [-0.4, -0.4,  0.4],
+    [ 0.4, -0.4,  0.4],
+    [ 0.4,  0.4,  0.4],
+    [-0.4,  0.4,  0.4]
 ])
 
-# --- Cube edges (pairs of vertex indices) ---
+# Cube edges (pairs of vertex indices)
 edges = [
     (0,1), (1,2), (2,3), (3,0),  # bottom square
     (4,5), (5,6), (6,7), (7,4),  # top square
     (0,4), (1,5), (2,6), (3,7)   # vertical lines
 ]
 
-# --- Update Plot ---
+# Update Plot
 def update(val=None):
     x = np.radians(x_slider.get())
     y = np.radians(y_slider.get())
@@ -80,7 +80,7 @@ def update(val=None):
 
     canvas.draw()
 
-# --- Tkinter setup ---
+# Tkinter setup
 root = tk.Tk()
 root.title("3D Cube Rotation")
 
@@ -90,7 +90,7 @@ ax = fig.add_subplot(111, projection='3d')
 canvas = FigureCanvasTkAgg(fig, master=root)
 canvas.get_tk_widget().pack()
 
-# --- Sliders ---
+# Sliders 
 slider_frame = tk.Frame(root)
 slider_frame.pack(side="bottom", fill="x")
 

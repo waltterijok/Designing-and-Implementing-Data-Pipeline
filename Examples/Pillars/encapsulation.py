@@ -23,3 +23,6 @@ Counter1._Counter__count = 9        # legal operation, see above brackets
 print("count:", Counter1.read())
 Counter1._Counter__count = 7
 print("count:", Counter1.read())
+Counter1.reset()
+print("count:", Counter1.read())
+
